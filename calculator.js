@@ -22,6 +22,3 @@ function deleteNum(){
     document.getElementById("myOutput").innerText = sum;
 }
 
-let e = '2*2.3';
-// let ans  document.getElementById("myOutput").innerText;
-console.log(eval(e));
