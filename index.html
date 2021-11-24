@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ececec;
+        }
+        .myDiv{
+            /* border: 1px solid black; */
+            background-color: whitesmoke;
+        }
+        .myDiv:hover{
+            cursor: pointer;
+            /* border: 1px solid lightpink; */
+            background-color:  gainsboro;
+            transition: .2s ease-in-out;
+        }
+        .myDivOpp{
+            background-color: #ffc107;
+            /* background-color: #dc3545; */
+        }
+        .myDivOpp:hover{
+            background-color: #ebb000;
+            transition: .2s ease-in-out;
+            cursor: pointer;
+            /* background-color: #dc3545; */
+        }
+        .myDivOppEqual{
+          background-color: #ffc107;
+          font-size: 20px;
+          color: white;
+        }
+        .myDivOppEqual:hover{
+          background-color: gainsboro;
+          transition: .2s ease-in-out;
+          cursor: pointer;
+          color: black;
+        }
+        #myOutput{
+          height: 80px;
+          margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center my-5">Calculator</h1>
+
+
+    <div class="container w-50">
+        <div class="row">
+          <div id="history" class="bg-dark text-secondary p-4"></div>
+            <div id="myOutput" class="col bg-dark text-light p-4 h3">&nbsp;</div>
+            <!-- <div class="col-4 bg-light text-dark">col-4</div> -->
+        </div>
+        <div class="row">
+          <div id="one" class="col text-dark p-4 text-center myDiv" onclick="addToSum('1')">1</div>
+          <div id="two" class="col text-dark p-4 text-center myDiv" onclick="addToSum('2')">2</div>
+          <div id="three" class="col text-dark p-4 text-center myDiv" onclick="addToSum('3')">3</div>
+          <div id="plus" class="col text-dark p-4 text-center myDivOpp" onclick="addToSum('+')">+</div>
+        </div>
+        <div class="row">
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('4')">4</div>
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('5')">5</div>
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('6')">6</div>
+            <div class="col text-dark p-4 text-center myDivOpp" onclick="addToSum('-')">-</div>
+          </div>
+          <div class="row">
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('7')">7</div>
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('8')">8</div>
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('9')">9</div>
+            <div class="col text-dark p-4 text-center myDivOpp" onclick="addToSum('*')">*</div>
+          </div>
+          <div class="row">
+            <div class="col text-dark p-4 text-center myDiv" onclick="addToSum('0')">0</div>
+            <div id="ans" class="col p-4 text-center myDivOppEqual" onclick="evaluateSum()"><strong>=</strong></div>
+            <div class="col text-dark p-4 text-center myDivOpp" onclick="addToSum('.')">.</div>
+            <div class="col text-dark p-4 text-center myDivOpp" onclick="addToSum('/')">/</div>
+          </div>
+        <div class="row">
+          <div class="col bg-light text-dark p-4" style="border: .5px solid gainsboro;">
+            <button type="button" class="btn btn-dark btn-lg" onclick="clearSum()">CLR</button>
+            <button type="button" class="btn btn-danger btn-lg" onclick="deleteNum()">DEL</button>
+          </div>
+        </div>
+      </div>
+ 
+    <script src="calculator.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+</html>
